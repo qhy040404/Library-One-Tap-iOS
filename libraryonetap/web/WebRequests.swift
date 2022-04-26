@@ -49,7 +49,7 @@ struct WebRequests {
         let url: URL = URL(string: Url)!
         var request:URLRequest=URLRequest(url: url)
         //var session:URLSession = URLSession.shared.self
-        var dataTask:URLSessionDataTask=session.dataTask(with: request) {(data, response, error) in
+        var dataTask:URLSessionDataTask=session.dataTask(with: request) {(data, _, error) in
             if(error == nil){
                 result=String(data: data!, encoding: String.Encoding.utf8)!
             }
@@ -67,7 +67,7 @@ struct WebRequests {
         request.httpMethod = "POST"
         let parameters: String = param
         request.httpBody=parameters.data(using: String.Encoding.utf8, allowLossyConversion: false)
-        var dataTask:URLSessionDataTask=session.dataTask(with: request) {(data, response, error) in
+        var dataTask:URLSessionDataTask=session.dataTask(with: request) {(data, _, error) in
             if(error == nil){
                 result = String(data: data!, encoding: String.Encoding.utf8)!
             }
