@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 //public struct WebRequests {
 public func createSession() -> URLSession{
@@ -20,16 +21,21 @@ var session = createSession()
     
     public func GET(Url:String) ->(String){
         var result:String = ""
+        var resultm = ""
         let url: URL = URL(string: Url)!
         var request:URLRequest=URLRequest(url: url)
         //var session:URLSession = URLSession.shared.self
         var dataTask:URLSessionDataTask=session.dataTask(with: request) {(data, response, error) in
             if(error == nil){
                 result=String(data: data!, encoding: String.Encoding.utf8)!
+                DispatchQueue.main.async {
+                    
+                }
+                print(data)
             }
         }
         dataTask.resume()
-        return result
+        return resultm
     }
     
     public func POST(Url:String, param:String) -> (String){
