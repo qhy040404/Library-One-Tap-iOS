@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct CheckSession {
-    func checkSession(json:String) ->(Bool){
+//public struct CheckSession {
+    public func checkSession(json:String) ->(Bool){
         var originalData = json
         let jsonData=originalData.data(using: String.Encoding.utf8)
         
@@ -17,4 +17,4 @@ struct CheckSession {
         var success:Bool = transferData["success"].boolValue
         return success
     }
-}
+//}

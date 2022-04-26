@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		9020F33328155A6C001F46F9 /* libraryonetapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020F33228155A6C001F46F9 /* libraryonetapApp.swift */; };
-		9020F33528155A6C001F46F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020F33428155A6C001F46F9 /* ContentView.swift */; };
 		9020F33728155A6F001F46F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9020F33628155A6F001F46F9 /* Assets.xcassets */; };
 		9020F33A28155A6F001F46F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9020F33928155A6F001F46F9 /* Preview Assets.xcassets */; };
 		9020F34428155A6F001F46F9 /* libraryonetapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020F34328155A6F001F46F9 /* libraryonetapTests.swift */; };
 		9020F34E28155A6F001F46F9 /* libraryonetapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020F34D28155A6F001F46F9 /* libraryonetapUITests.swift */; };
 		9020F35028155A6F001F46F9 /* libraryonetapUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020F34F28155A6F001F46F9 /* libraryonetapUITestsLaunchTests.swift */; };
 		9020F35D28156390001F46F9 /* WebRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020F35C28156390001F46F9 /* WebRequests.swift */; };
-		9020F35F28157639001F46F9 /* des.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020F35E28157639001F46F9 /* des.swift */; };
 		9020F362281583FE001F46F9 /* CheckSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020F361281583FE001F46F9 /* CheckSession.swift */; };
 		9020F36E28158962001F46F9 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020F36D28158962001F46F9 /* SwiftyJSON.swift */; };
-		9020F37228158AF2001F46F9 /* OrderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020F37128158AF2001F46F9 /* OrderList.swift */; };
+		90709FBC2817C4060044A75D /* OrderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90709FBB2817C4060044A75D /* OrderList.swift */; };
+		90709FC22817C6220044A75D /* desEncrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90709FC12817C6220044A75D /* desEncrypt.swift */; };
+		90709FC52817E0620044A75D /* CharacterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90709FC42817E0620044A75D /* CharacterExtension.swift */; };
+		90709FC9281809BA0044A75D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90709FC8281809BA0044A75D /* SettingsView.swift */; };
+		90709FCB28180A7A0044A75D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90709FCA28180A7A0044A75D /* ContentView.swift */; };
+		90709FD128180FF10044A75D /* Leave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90709FD028180FF10044A75D /* Leave.swift */; };
+		90709FD4281814D50044A75D /* FormRowStaticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90709FD3281814D50044A75D /* FormRowStaticView.swift */; };
+		90709FD82818261A0044A75D /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90709FD72818261A0044A75D /* ViewExtension.swift */; };
+		90709FDC281838690044A75D /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90709FDB281838690044A75D /* Login.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +47,6 @@
 /* Begin PBXFileReference section */
 		9020F32F28155A6C001F46F9 /* libraryonetap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = libraryonetap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9020F33228155A6C001F46F9 /* libraryonetapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = libraryonetapApp.swift; sourceTree = "<group>"; };
-		9020F33428155A6C001F46F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9020F33628155A6F001F46F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9020F33928155A6F001F46F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9020F33F28155A6F001F46F9 /* libraryonetapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libraryonetapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,10 +55,17 @@
 		9020F34D28155A6F001F46F9 /* libraryonetapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = libraryonetapUITests.swift; sourceTree = "<group>"; };
 		9020F34F28155A6F001F46F9 /* libraryonetapUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = libraryonetapUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9020F35C28156390001F46F9 /* WebRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRequests.swift; sourceTree = "<group>"; };
-		9020F35E28157639001F46F9 /* des.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = des.swift; sourceTree = "<group>"; };
 		9020F361281583FE001F46F9 /* CheckSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckSession.swift; sourceTree = "<group>"; };
 		9020F36D28158962001F46F9 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
-		9020F37128158AF2001F46F9 /* OrderList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderList.swift; sourceTree = "<group>"; };
+		90709FBB2817C4060044A75D /* OrderList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderList.swift; sourceTree = "<group>"; };
+		90709FC12817C6220044A75D /* desEncrypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desEncrypt.swift; sourceTree = "<group>"; };
+		90709FC42817E0620044A75D /* CharacterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterExtension.swift; sourceTree = "<group>"; };
+		90709FC8281809BA0044A75D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		90709FCA28180A7A0044A75D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		90709FD028180FF10044A75D /* Leave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leave.swift; sourceTree = "<group>"; };
+		90709FD3281814D50044A75D /* FormRowStaticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRowStaticView.swift; sourceTree = "<group>"; };
+		90709FD72818261A0044A75D /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		90709FDB281838690044A75D /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,14 +116,16 @@
 		9020F33128155A6C001F46F9 /* libraryonetap */ = {
 			isa = PBXGroup;
 			children = (
-				9020F37028158AE3001F46F9 /* data */,
+				90709FD2281814B50044A75D /* UI */,
+				90709FCF28180F830044A75D /* operation */,
+				90709FBA2817C3F00044A75D /* dataProcess */,
 				9020F36F28158A45001F46F9 /* packages */,
 				9020F360281583E1001F46F9 /* web */,
 				9020F33228155A6C001F46F9 /* libraryonetapApp.swift */,
-				9020F33428155A6C001F46F9 /* ContentView.swift */,
+				90709FCA28180A7A0044A75D /* ContentView.swift */,
+				90709FC8281809BA0044A75D /* SettingsView.swift */,
 				9020F33628155A6F001F46F9 /* Assets.xcassets */,
 				9020F33828155A6F001F46F9 /* Preview Content */,
-				9020F35E28157639001F46F9 /* des.swift */,
 			);
 			path = libraryonetap;
 			sourceTree = "<group>";
@@ -158,12 +172,32 @@
 			path = packages;
 			sourceTree = "<group>";
 		};
-		9020F37028158AE3001F46F9 /* data */ = {
+		90709FBA2817C3F00044A75D /* dataProcess */ = {
 			isa = PBXGroup;
 			children = (
-				9020F37128158AF2001F46F9 /* OrderList.swift */,
+				90709FBB2817C4060044A75D /* OrderList.swift */,
+				90709FC12817C6220044A75D /* desEncrypt.swift */,
+				90709FC42817E0620044A75D /* CharacterExtension.swift */,
 			);
-			path = data;
+			path = dataProcess;
+			sourceTree = "<group>";
+		};
+		90709FCF28180F830044A75D /* operation */ = {
+			isa = PBXGroup;
+			children = (
+				90709FD028180FF10044A75D /* Leave.swift */,
+				90709FDB281838690044A75D /* Login.swift */,
+			);
+			path = operation;
+			sourceTree = "<group>";
+		};
+		90709FD2281814B50044A75D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				90709FD3281814D50044A75D /* FormRowStaticView.swift */,
+				90709FD72818261A0044A75D /* ViewExtension.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +268,7 @@
 				TargetAttributes = {
 					9020F32E28155A6C001F46F9 = {
 						CreatedOnToolsVersion = 13.3.1;
+						LastSwiftMigration = 1330;
 					};
 					9020F33E28155A6F001F46F9 = {
 						CreatedOnToolsVersion = 13.3.1;
@@ -296,12 +331,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9020F35F28157639001F46F9 /* des.swift in Sources */,
-				9020F37228158AF2001F46F9 /* OrderList.swift in Sources */,
 				9020F362281583FE001F46F9 /* CheckSession.swift in Sources */,
+				90709FD128180FF10044A75D /* Leave.swift in Sources */,
+				90709FDC281838690044A75D /* Login.swift in Sources */,
 				9020F35D28156390001F46F9 /* WebRequests.swift in Sources */,
+				90709FBC2817C4060044A75D /* OrderList.swift in Sources */,
+				90709FD4281814D50044A75D /* FormRowStaticView.swift in Sources */,
+				90709FC9281809BA0044A75D /* SettingsView.swift in Sources */,
+				90709FD82818261A0044A75D /* ViewExtension.swift in Sources */,
 				9020F36E28158962001F46F9 /* SwiftyJSON.swift in Sources */,
-				9020F33528155A6C001F46F9 /* ContentView.swift in Sources */,
+				90709FCB28180A7A0044A75D /* ContentView.swift in Sources */,
+				90709FC52817E0620044A75D /* CharacterExtension.swift in Sources */,
+				90709FC22817C6220044A75D /* desEncrypt.swift in Sources */,
 				9020F33328155A6C001F46F9 /* libraryonetapApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,6 +499,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"libraryonetap/Preview Content\"";
@@ -477,6 +519,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.qhy040404.libraryonetap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -487,6 +531,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"libraryonetap/Preview Content\"";
@@ -506,6 +551,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.qhy040404.libraryonetap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

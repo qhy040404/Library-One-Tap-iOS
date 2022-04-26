@@ -7,44 +7,18 @@
 
 import Foundation
 
-struct WebRequests {
+//public struct WebRequests {
+public func createSession() -> URLSession{
+    let config=URLSessionConfiguration.default
+    config.httpShouldSetCookies = true
+    config.httpCookieAcceptPolicy = .always
+    let session:URLSession=URLSession(configuration: config)
+    return session
+}
+
+var session = createSession()
     
-    /*static func saveCookies(for urlStr: String){
-        if let url = URL(string: urlStr){
-            if let cookies = HTTPCookieStorage.shared.cookies(for: url){
-                var name:[String]
-                var data:[String]
-                var i = 0
-                //var un = ""
-                //var hash = ""
-                for cookie in cookies {
-                    /*if cookie.name == "cas_hash" {
-                        hash = cookie.value
-                        break
-                    }
-                }
-                for cookie in cookies {
-                    if cookie.name == "dlut_cas_un" {
-                        un = cookie.value
-                        break
-                    }*/
-                    name[i]=cookie.name
-                    data[i]=cookie.value
-                    i+=1
-                }
-                let defaults = UserDefaults.standard
-                for j:Int in 0...i{
-                    defaults.set(data[j], forKey: name[j])
-                }
-                //defaults.set(un, forKey: "dlut_cas_un")
-                //defaults.set(hash, forKey: "cas_hash")
-                defaults.synchronize()
-            }
-        }
-    }*/
-    var session:URLSession=URLSession.shared.self
-    
-    func GET(Url:String) ->(String){
+    public func GET(Url:String) ->(String){
         var result:String = ""
         let url: URL = URL(string: Url)!
         var request:URLRequest=URLRequest(url: url)
@@ -58,7 +32,7 @@ struct WebRequests {
         return result
     }
     
-    func POST(Url:String, param:String) -> (String){
+    public func POST(Url:String, param:String) -> (String){
         var result:String = ""
         let url = URL(string: Url)!
         //var session = GET(Url: url, id: id, passwd: passwd).1
@@ -76,15 +50,15 @@ struct WebRequests {
         return result
     }
     
-    func loginPostData(rsa:String, id:String, passwd:String, ltData:String) ->(String){
+    public func loginPostData(rsa:String, id:String, passwd:String, ltData:String) ->(String){
         let none:String = "none=on&"
         let rsa:String = "rsa="+rsa+"&"
-        let ul:String = "ul="+String(id.lengthOfBytes(using: String.Encoding.utf8))+"&"
-        let pl:String = "pl="+String(passwd.lengthOfBytes(using: String.Encoding.utf8))+"&"
+        let ul:String = "ul="+String(id.count)+"&"
+        let pl:String = "pl="+String(passwd.count)+"&"
         let sl:String = "sl=0&"
         let lt:String = "lt="+ltData+"&"
         let const:String = "execution=e1s1&_eventId=submit"
         return none+rsa+ul+pl+sl+lt+const
     }
     
-}
+//}
