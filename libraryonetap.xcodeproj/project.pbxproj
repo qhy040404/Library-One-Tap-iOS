@@ -15,7 +15,6 @@
 		9020F35028155A6F001F46F9 /* libraryonetapUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020F34F28155A6F001F46F9 /* libraryonetapUITestsLaunchTests.swift */; };
 		9020F35D28156390001F46F9 /* WebRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020F35C28156390001F46F9 /* WebRequests.swift */; };
 		9020F362281583FE001F46F9 /* CheckSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020F361281583FE001F46F9 /* CheckSession.swift */; };
-		9020F36E28158962001F46F9 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020F36D28158962001F46F9 /* SwiftyJSON.swift */; };
 		90709FBC2817C4060044A75D /* OrderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90709FBB2817C4060044A75D /* OrderList.swift */; };
 		90709FC22817C6220044A75D /* desEncrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90709FC12817C6220044A75D /* desEncrypt.swift */; };
 		90709FC52817E0620044A75D /* CharacterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90709FC42817E0620044A75D /* CharacterExtension.swift */; };
@@ -25,6 +24,7 @@
 		90709FD4281814D50044A75D /* FormRowStaticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90709FD3281814D50044A75D /* FormRowStaticView.swift */; };
 		90709FD82818261A0044A75D /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90709FD72818261A0044A75D /* ViewExtension.swift */; };
 		90709FDC281838690044A75D /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90709FDB281838690044A75D /* Login.swift */; };
+		9094A8DE281AD64100D8A39A /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 9094A8DD281AD64100D8A39A /* SwiftyJSON */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +56,6 @@
 		9020F34F28155A6F001F46F9 /* libraryonetapUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = libraryonetapUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9020F35C28156390001F46F9 /* WebRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRequests.swift; sourceTree = "<group>"; };
 		9020F361281583FE001F46F9 /* CheckSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckSession.swift; sourceTree = "<group>"; };
-		9020F36D28158962001F46F9 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		90709FBB2817C4060044A75D /* OrderList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderList.swift; sourceTree = "<group>"; };
 		90709FC12817C6220044A75D /* desEncrypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desEncrypt.swift; sourceTree = "<group>"; };
 		90709FC42817E0620044A75D /* CharacterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterExtension.swift; sourceTree = "<group>"; };
@@ -73,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9094A8DE281AD64100D8A39A /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,7 +119,6 @@
 				90709FD2281814B50044A75D /* UI */,
 				90709FCF28180F830044A75D /* operation */,
 				90709FBA2817C3F00044A75D /* dataProcess */,
-				9020F36F28158A45001F46F9 /* packages */,
 				9020F360281583E1001F46F9 /* web */,
 				9020F33228155A6C001F46F9 /* libraryonetapApp.swift */,
 				90709FCA28180A7A0044A75D /* ContentView.swift */,
@@ -162,14 +161,6 @@
 				9020F361281583FE001F46F9 /* CheckSession.swift */,
 			);
 			path = web;
-			sourceTree = "<group>";
-		};
-		9020F36F28158A45001F46F9 /* packages */ = {
-			isa = PBXGroup;
-			children = (
-				9020F36D28158962001F46F9 /* SwiftyJSON.swift */,
-			);
-			path = packages;
 			sourceTree = "<group>";
 		};
 		90709FBA2817C3F00044A75D /* dataProcess */ = {
@@ -216,6 +207,9 @@
 			dependencies = (
 			);
 			name = libraryonetap;
+			packageProductDependencies = (
+				9094A8DD281AD64100D8A39A /* SwiftyJSON */,
+			);
 			productName = libraryonetap;
 			productReference = 9020F32F28155A6C001F46F9 /* libraryonetap.app */;
 			productType = "com.apple.product-type.application";
@@ -289,6 +283,9 @@
 				Base,
 			);
 			mainGroup = 9020F32628155A6C001F46F9;
+			packageReferences = (
+				9094A8DC281AD64100D8A39A /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 9020F33028155A6C001F46F9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -339,7 +336,6 @@
 				90709FD4281814D50044A75D /* FormRowStaticView.swift in Sources */,
 				90709FC9281809BA0044A75D /* SettingsView.swift in Sources */,
 				90709FD82818261A0044A75D /* ViewExtension.swift in Sources */,
-				9020F36E28158962001F46F9 /* SwiftyJSON.swift in Sources */,
 				90709FCB28180A7A0044A75D /* ContentView.swift in Sources */,
 				90709FC52817E0620044A75D /* CharacterExtension.swift in Sources */,
 				90709FC22817C6220044A75D /* desEncrypt.swift in Sources */,
@@ -673,6 +669,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9094A8DC281AD64100D8A39A /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9094A8DD281AD64100D8A39A /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9094A8DC281AD64100D8A39A /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9020F32728155A6C001F46F9 /* Project object */;
 }

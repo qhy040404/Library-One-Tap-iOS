@@ -8,7 +8,7 @@
 import Foundation
 
 //struct Login {
-    public func login(id:String, pass:String) -> String {
+public func login(id:String, pass:String, session:URLSession) -> String {
         var returnText = ""
         
         let requestUrl = "https://sso.dlut.edu.cn/cas/login?service=http://seat.lib.dlut.edu.cn/yanxiujian/client/login.php?redirect=index.php"
@@ -16,14 +16,14 @@ import Foundation
         var loged_in:Bool = false
         var timer:Int = 0
         while !loged_in {
-            var ltResponse = GET(Url: requestUrl)
+            let ltResponse = GET(Url: requestUrl, session: session)
             let ltCheck = ltResponse.contains("LT")
             if ltCheck {
-                var ltData = String("LT"+ltResponse.components(separatedBy: "LT")[1].components(separatedBy: "cas")[0]+"cas")
-                var rawData = "\(id)\(pass)\(ltData)"
-                var rsa = strEnc(data: rawData, firstKey: "1", secondKey: "2", thirdKey: "3")
-                var login = POST(Url: requestUrl, param: loginPostData(rsa: rsa, id: id, passwd: pass, ltData: ltData))
-                var librarySession = POST(Url: sessionUrl, param: "")
+                let ltData = String("LT"+ltResponse.components(separatedBy: "LT")[1].components(separatedBy: "cas")[0]+"cas")
+                let rawData = "\(id)\(pass)\(ltData)"
+                let rsa = strEnc(data: rawData, firstKey: "1", secondKey: "2", thirdKey: "3")
+                var login = POST(Url: requestUrl, param: loginPostData(rsa: rsa, id: id, passwd: pass, ltData: ltData), session: session)
+                let librarySession = POST(Url: sessionUrl, param: "", session: session)
                 if checkSession(json: librarySession) {
                     loged_in = true
                 } else {
@@ -40,7 +40,7 @@ import Foundation
         }
         if loged_in {
             let listUrl = "http://seat.lib.dlut.edu.cn/yanxiujian/client/orderRoomAction.php?action=myOrderList&order=asc&offset=0&limit=10"
-            var list = GET(Url: listUrl)
+            let list = GET(Url: listUrl, session: session)
             let total = getTotal(json: list)
             if total != "0" {
                 let space_name = getSpace_name(json: list)

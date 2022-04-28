@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 //public struct CheckSession {
     public func checkSession(json:String) ->(Bool){

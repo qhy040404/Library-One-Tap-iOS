@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var textData: String = "请点击登录"
+    let session:URLSession = createSession()
     //@State var session: URLSession = createSession()
     //@State var id:String = UserDefaults.standard.string(forKey: "LIBRARY_ID") ?? ""
     //@State var passwd:String = UserDefaults.standard.string(forKey: "LIBRARY_PASS") ?? ""
@@ -24,7 +25,7 @@ struct ContentView: View {
                     Button("登录") {
                         let id:String = UserDefaults.standard.string(forKey: "LIBRARY_ID") ?? ""
                         let passwd:String = UserDefaults.standard.string(forKey: "LIBRARY_PASS") ?? ""
-                        textData = login(id: id, pass: passwd)
+                        textData = login(id: id, pass: passwd, session: session)
                     }
                     .padding(.bottom)
                     HStack(spacing: 75.0) {
